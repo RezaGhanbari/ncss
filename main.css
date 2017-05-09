@@ -1,8 +1,15 @@
-* {box-sizing:border-box}
+* {
+    box-sizing: border-box
+}
 
-body {font-family: Verdana,sans-serif;margin:0}
+body {
+    font-family: Verdana, sans-serif;
+    margin: 0
+}
 
-.slider {display:none}
+.slider {
+    display: none
+}
 
 /* Slideshow container */
 .slideshow-container {
@@ -34,7 +41,7 @@ body {font-family: Verdana,sans-serif;margin:0}
 
 /* On hover, add a black background color with a little bit see-through */
 .prev:hover, .next:hover {
-    background-color: rgba(0,0,0,0.8);
+    background-color: rgba(0, 0, 0, 0.8);
 }
 
 /* Caption text */
@@ -59,7 +66,7 @@ body {font-family: Verdana,sans-serif;margin:0}
 
 /* The dots/bullets/indicators */
 .dot {
-    cursor:pointer;
+    cursor: pointer;
     height: 13px;
     width: 13px;
     margin: 0 2px;
@@ -82,18 +89,28 @@ body {font-family: Verdana,sans-serif;margin:0}
 }
 
 @-webkit-keyframes fade {
-    from {opacity: .4}
-    to {opacity: 1}
+    from {
+        opacity: .4
+    }
+    to {
+        opacity: 1
+    }
 }
 
 @keyframes fade {
-    from {opacity: .4}
-    to {opacity: 1}
+    from {
+        opacity: .4
+    }
+    to {
+        opacity: 1
+    }
 }
 
 /* On smaller screens, decrease text size */
 @media only screen and (max-width: 300px) {
-    .prev, .next,.text {font-size: 11px}
+    .prev, .next, .text {
+        font-size: 11px
+    }
 }
 
 /* End of slider */
@@ -102,15 +119,17 @@ body {font-family: Verdana,sans-serif;margin:0}
 
 /* Beginning of Calendar */
 
-ul {list-style-type: none;}
+ul {
+    list-style-type: none;
+}
 
 .year {
-    font-size:18px;
+    font-size: 18px;
     margin: 10px 0 0 0;
 }
 
 .month {
-    text-align:center;
+    text-align: center;
     padding: 70px 25px;
     width: 100%;
     background: #35aeff;
@@ -163,30 +182,141 @@ ul {list-style-type: none;}
     width: 13.6%;
     text-align: center;
     margin-bottom: 5px;
-    font-size:12px;
+    font-size: 12px;
     color: #333;
 }
 
 .days li .active {
     padding: 5px;
-    -webkit-border-radius:50px;
-    -moz-border-radius:50px;
-    border-radius:50px;
+    -webkit-border-radius: 50px;
+    -moz-border-radius: 50px;
+    border-radius: 50px;
     background-color: #35aeff;
     color: white !important
 }
 
 /* Add media queries for smaller screens */
-@media screen and (max-width:720px) {
-    .weekdays li, .days li {width: 13.1%;}
+@media screen and (max-width: 720px) {
+    .weekdays li, .days li {
+        width: 13.1%;
+    }
 }
 
 @media screen and (max-width: 420px) {
-    .weekdays li, .days li {width: 12.5%;}
-    .days li .active {padding: 2px;}
+    .weekdays li, .days li {
+        width: 12.5%;
+    }
+
+    .days li .active {
+        padding: 2px;
+    }
 }
 
 @media screen and (max-width: 290px) {
-    .weekdays li, .days li {width: 12.2%;}
+    .weekdays li, .days li {
+        width: 12.2%;
+    }
 }
 
+/* end of Calendar */
+/* ------------------------------------- */
+
+/* ------------------------------------- */
+/* Beginning of Canvas */
+canvas {
+    width: 100%;
+}
+
+/* end of Canvas */
+/* ------------------------------------- */
+
+/* ------------------------------------- */
+/* Beginning of Button */
+.btn {
+    position: relative;
+    background-color: #4CAF50;
+    border: none;
+    font-size: 28px;
+    color: #FFFFFF;
+    padding: 20px;
+    width: 200px;
+    text-align: center;
+    -webkit-transition-duration: 0.4s;
+    -moz-transition-duration: 0.4s;
+    -ms-transition-duration: 0.4s;
+    -o-transition-duration: 0.4s;
+    transition-duration: 0.4s;
+    text-decoration: none;
+    overflow: hidden;
+    cursor: pointer;
+}
+.btn:after {
+    /*TODO*/
+    content: "";
+    background: #90EE90;
+    display: block;
+    position: absolute;
+    padding-top: 200%;
+    padding-left: 210%;
+    margin-left: -200px!important;
+    margin-top: -80%;
+    opacity: 0;
+    transition: all 0.8s
+}
+
+.btn:active:after {
+    padding: 0;
+    margin: 0;
+    opacity: 1;
+    transition: 0s
+}
+
+.success {
+    background-color: #4CAF50;
+
+}
+
+/* Green */
+.success:hover {
+    background-color: #46a049;
+}
+
+.info {
+    background-color: #2196F3;
+}
+
+/* Blue */
+.info:hover {
+    background: #0b7dda;
+}
+
+.warning {
+    background-color: #ff9800;
+}
+
+/* Orange */
+.warning:hover {
+    background: #e68a00;
+}
+
+.danger {
+    background-color: #f44336;
+}
+
+/* Red */
+.danger:hover {
+    background: #da190b;
+}
+
+.default {
+    background-color: #e7e7e7;
+    color: black;
+}
+
+/* Gray */
+.default:hover {
+    background: #ddd;
+}
+
+/* end of Button */
+/* ------------------------------------- */
