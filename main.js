@@ -23,3 +23,26 @@ const showSlides = () => {
     setTimeout(showSlides, timer); // Change image every  seconds
 };
 
+/* ---------------------------------------- */
+
+/* Calendar*/
+
+// use month() in html
+month=() => {
+    const monthArray =
+        ["January", "February", "March",
+        "April", "May", "June",
+        "July", "August", "September",
+        "October", "November", "December"];
+    let d = new Date();
+    let m = monthArray[d.getMonth()];
+    document.getElementById("monthName").innerHTML = m;
+};
+
+// use year() in html
+year=() => {
+    let d = new Date();
+    let dd = (d.getYear() -100)+2000;
+    document.getElementById("year").innerHTML = dd;
+};
+
