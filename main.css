@@ -234,78 +234,56 @@ canvas {
 
 /* ------------------------------------- */
 /* Beginning of Button */
-.btn {
-    position: relative;
-    background-color: #4CAF50;
+/* Material style */
+
+button {
     border: none;
-    font-size: 28px;
-    color: #FFFFFF;
-    text-align: center;
-    -webkit-transition-duration: 0.4s;
-    -moz-transition-duration: 0.4s;
-    -ms-transition-duration: 0.4s;
-    -o-transition-duration: 0.4s;
-    transition-duration: 0.4s;
-    text-decoration: none;
-    overflow: hidden;
     cursor: pointer;
+    color: white;
+    padding: 15px 40px;
+    border-radius: 2px;
+    font-size: 22px;
+    box-shadow: 2px 2px 4px rgba(0, 0, 0, .4);
+    background: #2196F3;
 }
 
-.btn.huge {
-    font-size: 35px;
-    padding: 40px;
-    width: 400px;
+/* Ripple magic */
+button {
+    position: relative;
+    overflow: hidden;
 }
 
-.btn.larger {
-    font-size: 27px;
-    padding: 30px;
-    width: 300px;
-}
-
-.btn.large {
-    font-size: 20px;
-    padding: 20px;
-    width: 200px;
-}
-
-.btn.medium {
-    font-size: 15px;
-    padding: 14px;
-    width: 150px;
-}
-
-.btn.small {
-    font-size: 13px;
-    padding: 10px;
-    width: 100px;
-}
-
-.btn.smaller {
-    font-size: 8px;
-    padding: 5px;
-    width: 50px;
-}
-
-.btn:after {
-    /*TODO*/
-    content: "";
-    background: white;
-    display: block;
+button:after {
+    content: '';
     position: absolute;
-    padding-top: 200%;
-    padding-left: 210%;
-    margin-left: -200px !important;
-    margin-top: -80%;
+    top: 50%;
+    left: 50%;
+    width: 5px;
+    height: 5px;
+    background: rgba(255, 255, 255, .5);
     opacity: 0;
-    transition: all 0.8s
+    border-radius: 100%;
+    transform: scale(1, 1) translate(-50%);
+    transform-origin: 50% 50%;
 }
 
-.btn:active:after {
-    padding: 0;
-    margin: 0;
-    opacity: 1;
-    transition: 0s
+@keyframes ripple {
+    0% {
+        transform: scale(0, 0);
+        opacity: 1;
+    }
+    20% {
+        transform: scale(25, 25);
+        opacity: 1;
+    }
+    100% {
+        opacity: 0;
+        transform: scale(40, 40);
+    }
+}
+
+button:focus:not(:active)::after {
+    animation: ripple 1s ease-out;
 }
 
 .success {
@@ -353,6 +331,38 @@ canvas {
 /* Gray */
 .default:hover {
     background: #ddd;
+}
+
+.button.small {
+    padding: 5px 10px;
+    border-radius: 1px;
+    font-size: 12px;
+}
+
+.button.medium {
+    padding: 8px 15px;
+    border-radius: 1px;
+    font-size: 15px;
+}
+
+.button.large {
+    padding: 12px 20px;
+    border-radius: 1px;
+    font-size: 20px;
+}
+
+.button.larger {
+    padding: 20px 30px;
+    border-radius: 1px;
+    font-size: 30px;
+}
+
+.button.fullwidth {
+    width: 100%;
+    /* TODO */
+}
+
+
 }
 
 /* end of Button */
@@ -480,10 +490,10 @@ canvas {
     background: #ff6600;
     color: white;
 }
+
 /*TODO for smaller devices and other sizes of icons*/
 
 /* loading buttons */
-
 
 /* End of fonts */
 /* ------------------------------- */
