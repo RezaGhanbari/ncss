@@ -362,14 +362,11 @@ button:focus:not(:active)::after {
     /* TODO */
 }
 
-
-}
-
 /* end of Button */
 /* ------------------------------------- */
 
 /* ------------------------------------- */
-/* Beginning of fonts */
+/* Beginning of font awesome */
 
 .fa {
     padding: 15px 0 15px 0;
@@ -495,5 +492,5 @@ button:focus:not(:active)::after {
 
 /* loading buttons */
 
-/* End of fonts */
+/* End of font awesome */
 /* ------------------------------- */
