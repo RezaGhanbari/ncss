@@ -371,7 +371,7 @@ button:focus:not(:active)::after {
 .fa {
     padding: 15px 0 15px 0;
     font-size: 30px;
-    width: 65px;
+    width: 55px;
     text-align: center;
     text-decoration: none;
     margin: 5px 2px;
